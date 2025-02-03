@@ -9,7 +9,6 @@ export default function Home() {
   const pathname = usePathname();
   const router = useRouter();
 
-  // Animate the hero section on scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 200) {
@@ -31,7 +30,7 @@ export default function Home() {
       <section className="flex justify-center items-center h-full text-center p-8 bg-gradient-to-r from-[#1A202C] to-[#2D3748]">
         <div className="max-w-3xl text-white">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 animate__animated animate__fadeIn">
-            Hi, I'm <span className="text-yellow-400">Sana Fathi</span>
+            Hi, I am <span className="text-yellow-400">Sana Fathi</span>
           </h1>
           <p className="text-xl sm:text-2xl mb-6 animate__animated animate__fadeIn animate__delay-1s">
             A passionate Front-End Developer focused on building intuitive user
