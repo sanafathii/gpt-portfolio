@@ -16,7 +16,7 @@ export default function About() {
         </div>
         <div className="md:w-2/3 md:ml-8 mt-4 md:mt-0">
           <p className="text-lg">
-            Hello! I'm Sana Fathi, a passionate Front-End Developer with a keen
+            Hello! I am Sana Fathi, a passionate Front-End Developer with a keen
             eye for design and a commitment to creating seamless user
             experiences. I specialize in building responsive and interactive web
             applications using modern technologies.
@@ -29,8 +29,8 @@ export default function About() {
           </p>
           <h2 className="text-2xl font-semibold mt-4">Work Experience</h2>
           <p className="text-lg mt-2">
-            With over [X] years of experience in the industry, I have worked on
-            a variety of projects, ranging from small business websites to
+            With over x years of experience in the industry, I have worked on a
+            variety of projects, ranging from small business websites to
             large-scale applications. My roles have involved collaborating with
             cross-functional teams to deliver high-quality products that meet
             client needs.
