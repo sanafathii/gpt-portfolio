@@ -1,10 +1,5 @@
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faLinkedin,
-    faGithub,
-    faLeetcode,
-    faEnvelope,
-} from "@fortawesome/free-brands-svg-icons";
 
 const socialLinks = [{
         id: 1,
@@ -19,14 +14,6 @@ const socialLinks = [{
         platform: "GitHub",
         link: "https://github.com/sanafathii",
         icon: < FontAwesomeIcon icon = { faGithub }
-        />,
-        size: "2x",
-    },
-    {
-        id: 3,
-        platform: "Email",
-        link: "mailto:sana.fathi30@gmail.com",
-        icon: < FontAwesomeIcon icon = { faEnvelope }
         />,
         size: "2x",
     },
