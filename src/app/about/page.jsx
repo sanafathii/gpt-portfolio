@@ -1,58 +1,86 @@
-import Image from "next/image";
+"use client";
 
-export default function About() {
+export default function AboutMe() {
+  const timelineData = [
+    {
+      title: "Software Engineer at ABC Corp.",
+      date: "2022 - Present",
+      description:
+        "Developing high-quality user interfaces using React and Next.js.",
+    },
+    {
+      title: "Junior Developer at XYZ Ltd.",
+      date: "2020 - 2022",
+      description:
+        "Worked on front-end development using HTML, CSS, JavaScript, and React.",
+    },
+    {
+      title: "Bachelor's Degree in Computer Science",
+      date: "2016 - 2020",
+      description:
+        "Studied full-stack development, algorithms, data structures, and web technologies.",
+    },
+  ];
+
+  const skillsData = [
+    { skill: "React.js", level: 80 },
+    { skill: "Next.js", level: 75 },
+    { skill: "CSS / Tailwind CSS", level: 90 },
+    { skill: "JavaScript", level: 85 },
+  ];
+
   return (
-    <main className="p-8">
-      <h1 className="text-3xl font-bold">About Me</h1>
-      <div className="mt-4 flex flex-col md:flex-row items-center">
-        <div className="md:w-1/3">
-          <Image
-            src="/homepage-image.avif"
-            alt="Sana Fathi"
-            width={300}
-            height={300}
-            className="rounded-full"
-          />
-        </div>
-        <div className="md:w-2/3 md:ml-8 mt-4 md:mt-0">
-          <p className="text-lg">
-            Hello! I am Sana Fathi, a passionate Front-End Developer with a keen
-            eye for design and a commitment to creating seamless user
-            experiences. I specialize in building responsive and interactive web
-            applications using modern technologies.
-          </p>
-          <h2 className="text-2xl font-semibold mt-4">Education</h2>
-          <p className="text-lg mt-2">
-            I hold a degree in Computer Science, which has provided me with a
-            solid foundation in software development principles and best
-            practices.
-          </p>
-          <h2 className="text-2xl font-semibold mt-4">Work Experience</h2>
-          <p className="text-lg mt-2">
-            With over x years of experience in the industry, I have worked on a
-            variety of projects, ranging from small business websites to
-            large-scale applications. My roles have involved collaborating with
-            cross-functional teams to deliver high-quality products that meet
-            client needs.
-          </p>
-          <h2 className="text-2xl font-semibold mt-4">Skills</h2>
-          <ul className="list-disc list-inside text-lg mt-2">
-            <li>HTML5, CSS3, JavaScript</li>
-            <li>React.js, Next.js</li>
-            <li>Responsive Web Design</li>
-            <li>Version Control (Git)</li>
-            <li>UI/UX Design Principles</li>
-            <li>Cross-Browser Compatibility</li>
-          </ul>
-          <h2 className="text-2xl font-semibold mt-4">Interests</h2>
-          <p className="text-lg mt-2">
-            Beyond coding, I enjoy exploring the latest trends in web
-            development, contributing to open-source projects, and attending
-            tech meetups. In my free time, I love hiking, photography, and
-            experimenting with new recipes.
-          </p>
+    <section className="p-8">
+      <h1 className="text-4xl font-bold mb-6">About Me</h1>
+
+      <div className="mb-12">
+        <h2 className="text-3xl font-semibold mb-4">Timeline</h2>
+        <div className="relative">
+          {timelineData.map((item, index) => (
+            <div key={index} className="mb-8 flex items-center">
+              <div className="absolute left-[-20px] top-0 w-4 h-4 bg-yellow-400 rounded-full"></div>
+              <div className="ml-6">
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <p className="text-gray-500">{item.date}</p>
+                <p className="text-gray-700">{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </main>
+
+      <div className="mb-12">
+        <h2 className="text-3xl font-semibold mb-4">Skills</h2>
+        {skillsData.map((skill, index) => (
+          <div key={index} className="mb-6">
+            <p className="text-lg font-medium">{skill.skill}</p>
+            <div className="w-full bg-gray-300 h-2 rounded-full">
+              <div
+                className="h-2 rounded-full bg-yellow-400"
+                style={{ width: `${skill.level}%` }}
+              ></div>
+            </div>
+            <p className="text-sm text-gray-500">{skill.level}% Proficient</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="flex justify-center mb-12">
+        <div className="w-full md:w-2/3">
+          <h2 className="text-3xl font-semibold mb-4">Personal Introduction</h2>
+          <div className="aspect-w-16 aspect-h-9">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+              title="Personal Introduction"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
